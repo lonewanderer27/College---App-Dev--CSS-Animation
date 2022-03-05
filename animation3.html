@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .element {
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+  background-color: red;
+  animation-name: stretch;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+element {
+  animation-name: example;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes stretch {
+  0% {
+    transform: scale(.3);
+    background-color: blue;
+    border-radius: 100%;
+    transform:rotate(0deg);
+    
+  }
+  50% {
+    background-color: indigo;
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: violet;
+    transform:rotate(360deg);
+  }
+  
+}
+
+ 
+body,
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+</style>
+</head>
+<body>
+
+<div class="element"></div>
+</body>
+</html>

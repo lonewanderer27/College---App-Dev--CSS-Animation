@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    
+    /* Standard syntax */
+    animation-name: move;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+/* Standard syntax */
+@keyframes move {
+    0%  {background-color:orange; left:20px; top:20px;}
+    25%  {background-color:yellow; left:1250px; top:10px;}
+    50% {background-color:blue; left:1250px; top:580px;}
+    75% {background-color:violet; left:20px; top:580px;}
+    100%  {background-color:blue; left:20px; top:20px;}
+    
+    0% {
+        transform:rotate(0deg);
+    }
+    25% {
+        transform:rotate(360deg);
+    }
+    
+   50% {
+    transform: scale(.3);
+    background-color: red;
+    border-radius: 100%;
+  }
+  75% {
+    background-color: orange;
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+
+<div></div>
+
+</body>
+</html>

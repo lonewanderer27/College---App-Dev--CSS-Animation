@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="button.css">
+    <title>Animations</title>
+</head>
+<body>
+    <div class="w3-row w3-bottom w3-opacity-min">
+        <div class="w3-col">
+            <div id="button_body" class="w3-right w3-margin">
+                <button id="btnPrevious">  PREVIOUS   <span>ANIMATION</span></button>
+            </div>
+        </div>
+
+        <div class="w3-col">
+            <div id="button_body" class="w3-right w3-margin">
+                <button id="btnNext">  NEXT   <span>ANIMATION</span></button>
+            </div>
+        </div>
+    </div>
+
+    <iframe id="animation_iframe" src="animation1.html" style="border:none;"></iframe>
+
+    <script>
+        const viewport_width = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+        const viewport_height = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+        console.log("The value of viewport_width is " + viewport_width);
+        console.log("The value of --viewport_height is " + viewport_height);
+        const animation_iframe = document.getElementById('animation_iframe');
+        animation_iframe.style.cssText += `width:${viewport_width}px;height:${viewport_height}px`;
+
+        var current_animation = 1;
+        const btnPrevious = document.getElementById('btnPrevious');
+        btnPrevious.addEventListener("click", a_previous)
+        const btnNext = document.getElementById('btnNext');
+        btnNext.addEventListener("click", a_next)
+
+        function a_next() {
+            if (current_animation == 5) {
+                current_animation = 1
+            }
+            else {
+                current_animation += 1
+            }
+
+            console.log(`next: animation set to ${current_animation}.html`)
+            animation_iframe.src = `animation${current_animation}.html`;
+        }
+
+        function a_previous() {
+            if (current_animation == 1) {
+                current_animation = 5
+            }
+            else {
+                current_animation -= 1
+            }
+
+            console.log(`previous: animation set to ${current_animation}.html`)
+            animation_iframe.src = `animation${current_animation}.html`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    width: 80px;
+    height: 80px;
+    background-color: red;
+    position: relative;
+    -webkit-animation-name: move; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-delay: 0s; /* Safari 4.0 - 8.0 */
+    animation-name: move;
+    animation-duration: 6s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+
+}
+
+
+/* Standard syntax */
+@keyframes move {
+     0%  {background-color:orange; right:0px; bottom:0px;}
+    50% {background-color:blue; left:1250px; top:580px;}
+    75% {background-color:violet; left:20px; top:580px;}
+    100%  {background-color:blue; left:20px; top:20px;}
+    
+  
+  0% {
+        transform:rotate(0deg);
+    }
+    25% {
+        transform:rotate(360deg);
+    }
+    
+   50% {
+    transform: scale(.3);
+    border-radius: 100%;
+  }
+  75% {
+    background-color: orange;
+  }
+  100% {
+    transform: scale(1.5);
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+
+<div></div>
+
+
+
+</body>
+</html>
